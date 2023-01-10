@@ -1,0 +1,17 @@
+{
+  "name": "001-qr-code-component-main",
+  "version": "1.0.0",
+  "description": "My first Frontend Mentor Challenge. I would try to use and practice tailwindcss on designing the site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./css/input.css -o ./css/main.css --watch",
+    "tailwind-minify": "npx tailwindcss -i ./css/input.css -o ./css/main.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

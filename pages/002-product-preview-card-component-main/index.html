@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- main css file -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body
+    class="relative bg-cream min-h-screen flex place-items-start pt-6 md:place-items-center"
+  >
+    <main
+      class="container max-w-xs rounded-xl flex md:max-h-[540px] flex-col md:grid md:grid-cols-2 md:max-w-2xl mx-auto bg-white"
+    >
+      <img
+        class="h-64 md:h-full md:w-full object-cover rounded-t-xl md:rounded-tl-xl md:rounded-bl-xl md:rounded-tr-none"
+        src="./images/image-product-desktop.jpg"
+        alt="product image"
+      />
+      <div class="p-6 md:p-8 flex flex-col space-y-4 md:space-y-10">
+        <span
+          class="font-sansSerif text-xs text-darkGrayishBlue uppercase tracking-[3.6px]"
+          >Perfume</span
+        >
+        <h1 class="font-sans text-3xl md:text-4xl">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="text-sm font-sansSerif text-darkGrayishBlue text-justify">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="flex flex-row space-x-4 items-center">
+          <p class="price text-darkCyan font-sans font-bold text-4xl">
+            $149.99
+          </p>
+          <span
+            class="text-darkGrayishBlue text-sm line-through font-sansSerif"
+          >
+            $169.99
+          </span>
+        </div>
+        <button
+          class="bg-darkCyan text-white text-sm font-sansSerif font-bold w-full p-3 md:p-4 rounded-xl"
+        >
+          <span
+            class="text-lg -mt-1 leading-none align-middle mr-1 material-icons-outlined"
+          >
+            shopping_cart
+          </span>
+          Add to Cart
+        </button>
+      </div>
+    </main>
+
+    <footer class="attribution absolute left-0 bottom-0 w-full bg-white p-3">
+      <p>
+        Challenge by
+        <a
+          class="text-darkCyan"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a class="text-darkCyan" href="https://github.com/WilAm1">WilAm1</a>.
+      </p>
+    </footer>
+  </body>
+</html>
