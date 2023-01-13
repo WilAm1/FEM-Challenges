@@ -36,21 +36,54 @@
     <main
       class="max-w-sm mx-auto rounded-xl p-6 bg-darkBlue text-white space-y-6"
     >
-      <div class="star">
-        <span
-          class="material-icons text-orange bg-mediumGray bg-opacity-10 rounded-full p-4"
-        >
-          grade
-        </span>
-      </div>
+      <img
+        src="./images/icon-star.svg"
+        alt="Star Icon "
+        class="rounded-full p-3 bg-mediumGray bg-opacity-20"
+      />
       <h1 class="font-sans font-bold text-3xl">How did we do?</h1>
       <p class="text-lightGray">
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
+      <div class="input-group flex flex-wrap gap-5">
+        <label
+          for="1"
+          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
+          ><span class="">1</span>
+          <input type="radio" class="appearance-none" name="number" id="1" />
+        </label>
 
-      1 2 3 4 5
-      <button>Submit</button>
+        <label
+          for="2"
+          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
+          >2
+          <input type="radio" class="appearance-none" name="number" id="2" />
+        </label>
+        <label
+          for="3"
+          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+          >3
+          <input type="radio" class="appearance-none" name="number" id="3" />
+        </label>
+        <label
+          for="4"
+          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+          >4
+          <input type="radio" class="appearance-none" name="number" id="4" />
+        </label>
+        <label
+          for="5"
+          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+          >5
+          <input type="radio" class="appearance-none" name="number" id="5" />
+        </label>
+      </div>
+      <button
+        class="bg-orange rounded-full w-full p-3 uppercase tracking-widest font-bold text-xs"
+      >
+        Submit
+      </button>
       <!-- Rating state end -->
     </main>
 
