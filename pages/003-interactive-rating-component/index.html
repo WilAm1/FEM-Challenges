@@ -21,33 +21,57 @@
       href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <!-- Style Sheet -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
+  <body class="bg-veryDarkBlue relative flex min-h-screen place-items-center">
     <!-- Rating state start -->
 
-    <p class="font-sans font-bold">How did we do?</p>
+    <main
+      class="max-w-sm mx-auto rounded-xl p-6 bg-darkBlue text-white space-y-6"
+    >
+      <div class="star">
+        <span
+          class="material-icons text-orange bg-mediumGray bg-opacity-10 rounded-full p-4"
+        >
+          grade
+        </span>
+      </div>
+      <h1 class="font-sans font-bold text-3xl">How did we do?</h1>
+      <p class="text-lightGray">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
 
-    Please let us know how we did with your support request. All feedback is
-    appreciated to help us improve our offering! 1 2 3 4 5 Submit
+      1 2 3 4 5
+      <button>Submit</button>
+      <!-- Rating state end -->
+    </main>
 
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch!
-
-    <!-- Thank you state end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <footer
+      class="absolute bottom-0 p-2 left-0 w-full text-mediumGray bg-darkBlue"
+    >
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="text-orange font-bold"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/WilAm1"
+          target="_blank"
+          class="text-orange font-bold"
+          >WilAm1</a
+        >.
+      </div>
+    </footer>
   </body>
 </html>
