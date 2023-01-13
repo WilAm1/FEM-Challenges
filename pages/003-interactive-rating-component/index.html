@@ -46,45 +46,48 @@
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <div class="input-group flex flex-wrap gap-5">
-        <label
-          for="1"
-          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
-          ><span class="">1</span>
-          <input type="radio" class="appearance-none" name="number" id="1" />
-        </label>
-
-        <label
-          for="2"
-          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
-          >2
-          <input type="radio" class="appearance-none" name="number" id="2" />
-        </label>
-        <label
-          for="3"
-          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
-          >3
-          <input type="radio" class="appearance-none" name="number" id="3" />
-        </label>
-        <label
-          for="4"
-          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
-          >4
-          <input type="radio" class="appearance-none" name="number" id="4" />
-        </label>
-        <label
-          for="5"
-          class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
-          >5
-          <input type="radio" class="appearance-none" name="number" id="5" />
-        </label>
-      </div>
+      <form action="">
+        <div class="input-group flex flex-wrap gap-5">
+          <label
+            for="1"
+            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
+            >1
+            <input type="radio" class="appearance-none" name="number" id="1" />
+          </label>
+          <label
+            for="2"
+            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
+            >2
+            <input type="radio" class="appearance-none" name="number" id="2" />
+          </label>
+          <label
+            for="3"
+            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+            >3
+            <input type="radio" class="appearance-none" name="number" id="3" />
+          </label>
+          <label
+            for="4"
+            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+            >4
+            <input type="radio" class="appearance-none" name="number" id="4" />
+          </label>
+          <label
+            for="5"
+            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+            >5
+            <input type="radio" class="appearance-none" name="number" id="5" />
+          </label>
+        </div>
+      </form>
       <button
         class="bg-orange rounded-full w-full p-3 uppercase tracking-widest font-bold text-xs"
       >
         Submit
       </button>
       <!-- Rating state end -->
+
+      <!-- Thank you page -->
     </main>
 
     <footer
@@ -107,4 +110,22 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    const submit = document.querySelector("button");
+    const form = document.querySelector("form");
+    const labels = [...document.querySelectorAll("label")];
+    labels.forEach((elem) => {
+      elem.addEventListener("click", (event) => {
+        // * Prevents the event to trigger twice, on label and to radio input
+        event.stopPropagation();
+        event.preventDefault();
+
+        // Toggles selected class state on labels
+        labels.forEach((e) => e.classList.remove("selected"));
+        elem.classList.add("selected");
+        console.log(elem.innerText);
+      });
+    });
+  </script>
 </html>
