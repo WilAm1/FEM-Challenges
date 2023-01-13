@@ -34,60 +34,104 @@
     <!-- Rating state start -->
 
     <main
-      class="max-w-sm mx-auto rounded-xl p-6 bg-darkBlue text-white space-y-6"
+      class="max-w-xs md:max-w-sm mx-auto rounded-3xl p-8 bg-darkBlue text-white"
     >
-      <img
-        src="./images/icon-star.svg"
-        alt="Star Icon "
-        class="rounded-full p-3 bg-mediumGray bg-opacity-20"
-      />
-      <h1 class="font-sans font-bold text-3xl">How did we do?</h1>
-      <p class="text-lightGray">
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <form action="">
-        <div class="input-group flex flex-wrap gap-5">
-          <label
-            for="1"
-            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
-            >1
-            <input type="radio" class="appearance-none" name="number" id="1" />
-          </label>
-          <label
-            for="2"
-            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
-            >2
-            <input type="radio" class="appearance-none" name="number" id="2" />
-          </label>
-          <label
-            for="3"
-            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
-            >3
-            <input type="radio" class="appearance-none" name="number" id="3" />
-          </label>
-          <label
-            for="4"
-            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
-            >4
-            <input type="radio" class="appearance-none" name="number" id="4" />
-          </label>
-          <label
-            for="5"
-            class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
-            >5
-            <input type="radio" class="appearance-none" name="number" id="5" />
-          </label>
-        </div>
-      </form>
-      <button
-        class="bg-orange rounded-full w-full p-3 uppercase tracking-widest font-bold text-xs"
-      >
-        Submit
-      </button>
-      <!-- Rating state end -->
+      <!-- Rating Container -->
+      <div class="form-container space-y-6">
+        <img
+          src="./images/icon-star.svg"
+          alt="Star Icon "
+          class="rounded-full p-3 bg-mediumGray bg-opacity-20"
+        />
+        <h1 class="font-sans font-bold text-3xl">How did we do?</h1>
+        <p class="text-lightGray">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form action="">
+          <div class="input-group flex flex-wrap gap-5">
+            <label
+              for="1"
+              class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
+              >1
+              <input
+                type="radio"
+                class="appearance-none"
+                name="number"
+                id="1"
+              />
+            </label>
+            <label
+              for="2"
+              class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center items-center opacity-50 hover:bg-opacity-100 hover:opacity-100"
+              >2
+              <input
+                type="radio"
+                class="appearance-none"
+                name="number"
+                id="2"
+              />
+            </label>
+            <label
+              for="3"
+              class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+              >3
+              <input
+                type="radio"
+                class="appearance-none"
+                name="number"
+                id="3"
+              />
+            </label>
+            <label
+              for="4"
+              class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+              >4
+              <input
+                type="radio"
+                class="appearance-none"
+                name="number"
+                id="4"
+              />
+            </label>
+            <label
+              for="5"
+              class="w-12 h-12 bg-mediumGray bg-opacity-20 rounded-full flex place-content-center opacity-50 items-center hover:bg-opacity-100 hover:opacity-100"
+              >5
+              <input
+                type="radio"
+                class="appearance-none"
+                name="number"
+                id="5"
+              />
+            </label>
+          </div>
+        </form>
+        <button
+          class="bg-orange rounded-full w-full p-3 uppercase tracking-widest font-bold text-xs"
+        >
+          Submit
+        </button>
+      </div>
 
-      <!-- Thank you page -->
+      <!-- Thank you Container-->
+      <div class="thanks-container text-lightGray text-center">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="Thank you illustration"
+          class="mx-auto mb-6"
+        />
+        <p
+          class="bg-lightGray p-1 px-3 text-sm opacity-80 mx-auto bg-opacity-10 text-orange rounded-full mb-10 w-fit"
+        >
+          You selected <span class="rating"></span> out of 5
+        </p>
+        <h2 class="font-bold text-2xl text-white mb-2">Thank You!</h2>
+        <p class="">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
     </main>
 
     <footer
@@ -113,8 +157,13 @@
 
   <script>
     const submit = document.querySelector("button");
-    const form = document.querySelector("form");
     const labels = [...document.querySelectorAll("label")];
+    const formContainer = document.querySelector(".form-container");
+
+    const thanksContainer = document.querySelector(".thanks-container");
+    thanksContainer.style.display = "none";
+    let rating = "";
+
     labels.forEach((elem) => {
       elem.addEventListener("click", (event) => {
         // * Prevents the event to trigger twice, on label and to radio input
@@ -124,8 +173,17 @@
         // Toggles selected class state on labels
         labels.forEach((e) => e.classList.remove("selected"));
         elem.classList.add("selected");
-        console.log(elem.innerText);
+        rating = elem.innerText;
       });
+    });
+
+    // Shows the thank you message
+    submit.addEventListener("click", () => {
+      formContainer.style.display = "none";
+
+      thanksContainer.style.display = "block";
+      const ratingSpan = document.querySelector(".rating");
+      ratingSpan.textContent = rating;
     });
   </script>
 </html>
