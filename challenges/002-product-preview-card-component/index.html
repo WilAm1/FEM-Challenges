@@ -35,11 +35,19 @@
     <main
       class="container max-w-xs rounded-xl flex md:max-h-[540px] flex-col md:grid md:grid-cols-2 md:max-w-2xl mx-auto bg-white"
     >
-      <img
-        class="h-64 md:h-full md:w-full object-cover rounded-t-xl md:rounded-tl-xl md:rounded-bl-xl md:rounded-tr-none"
-        src="./images/image-product-desktop.jpg"
-        alt="product image"
-      />
+      <picture>
+        <source
+          media="(max-width: 600px)"
+          srcset="./images/image-product-mobile.jpg"
+          sizes=""
+        />
+
+        <img
+          class="h-64 md:h-full md:w-full object-cover rounded-t-xl md:rounded-tl-xl md:rounded-bl-xl md:rounded-tr-none"
+          src="./images/image-product-desktop.jpg"
+          alt="product image"
+        />
+      </picture>
       <div class="p-6 md:p-8 flex flex-col space-y-4 md:space-y-10">
         <span
           class="font-sansSerif text-xs text-darkGrayishBlue uppercase tracking-[3.6px]"
