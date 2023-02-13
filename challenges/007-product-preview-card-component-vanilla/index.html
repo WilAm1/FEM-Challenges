@@ -27,13 +27,19 @@
   <body class="bg-clr-primary">
     <main>
       <div class="container bg-clr-light">
-        <img
-          src="./images/image-product-desktop.jpg"
-          alt="Picture of perfume."
-        />
+        <picture>
+          <source
+            media="(min-width:600px )"
+            srcset="./images/image-product-desktop.jpg"
+          />
+          <img
+            src="./images/image-product-mobile.jpg"
+            alt="Picture of perfume."
+          />
+        </picture>
         <div class="product-details">
           <div class="product-label">
-            <span>Perfume </span>
+            <span class="product__tag">Perfume </span>
           </div>
           <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
           <p class="description">
