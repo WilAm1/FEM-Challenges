@@ -41,7 +41,11 @@ body {
 }
 
 footer {
-  background-color: var(--clr-primary);
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-neutral-100);
+}
+footer a {
+  color: var(--clr-neutral-600);
 }
 
 img,
@@ -118,6 +122,11 @@ button {
   border: none;
   background-color: var(--clr-primary-dark);
   color: var(--clr-neutral-100);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #174131;
 }
 
 @media (max-width: 600px) {
