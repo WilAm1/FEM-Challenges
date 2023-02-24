@@ -91,6 +91,41 @@ select {
 
 body {
   background-color: var(--clr-neutral-300);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  color: var(--clr-neutral-600);
+}
+
+.centered {
+  display: grid;
+  grid-template-rows: 1fr 50px;
+}
+
+h1 {
+  color: var(--clr-neutral-600);
+}
+
+p {
+  color: var(--clr-primary);
+}
+
+.nft-card {
+  background-color: var(--clr-neutral-500);
+}
+
+.price {
+  color: var(--clr-primary-400);
+}
+.price::before {
+  display: inline;
+  content: url("../images/icon-ethereum.svg");
+  margin-right: 10px;
+}
+
+.duration::before {
+  display: inline;
+  content: url("../images/icon-clock.svg");
+  margin-right: 10px;
 }
 
 /* Desktop layout */
