@@ -89,6 +89,10 @@ select {
   --fw-bold: 600;
 }
 
+body {
+  background-color: var(--clr-neutral-300);
+}
+
 /* Desktop layout */
 
 /*# sourceMappingURL=output.css.map */

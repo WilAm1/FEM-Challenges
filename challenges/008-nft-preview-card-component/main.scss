@@ -94,6 +94,9 @@ select {
   --fw-light: 300;
   --fw-bold: 600;
 }
+body {
+  background-color: var(--clr-neutral-300);
+}
 
 /* Desktop layout */
 @media screen and (max-width: 400px) {
