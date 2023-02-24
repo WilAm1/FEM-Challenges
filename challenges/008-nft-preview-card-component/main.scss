@@ -1,3 +1,6 @@
+/* Google Outfit font */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
 /* Box sizing rules */
 *,
 *::before,
@@ -71,4 +74,27 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+// CSS variables
+
+:root {
+  /* Colors */
+  --clr-primary: hsl(215, 51%, 70%);
+  --clr-primary-400: hsl(178, 100%, 50%);
+  --clr-neutral-300: hsl(217, 54%, 11%);
+  --clr-neutral-400: hsl(216, 50%, 16%);
+  --clr-neutral-500: hsl(215, 32%, 27%);
+  --clr-neutral-600: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-size: 18px;
+  --font-family: "Outfit", "Arial", sans-serif;
+  --fw-regular: 400;
+  --fw-light: 300;
+  --fw-bold: 600;
+}
+
+/* Desktop layout */
+@media screen and (max-width: 400px) {
 }
