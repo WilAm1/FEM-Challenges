@@ -106,15 +106,22 @@ body {
 h1 {
   color: var(--clr-neutral-600);
 }
+
 p {
   color: var(--clr-primary);
   font-weight: var(--fw-light);
 }
+
+hr {
+  border-top: 2px solid var(--clr-neutral-500);
+}
+
 .centered {
   display: grid;
   grid-template-rows: 1fr 50px;
   place-items: center;
 }
+
 .ch-clr-pointer {
   cursor: pointer;
   &:hover {
@@ -157,7 +164,7 @@ p {
   }
 }
 
-details {
+.details {
   display: flex;
   justify-content: space-between;
 
@@ -177,11 +184,6 @@ details {
     }
   }
 }
-
-hr {
-  border-top: 2px solid var(--clr-neutral-500);
-}
-
 .creation {
   display: flex;
   flex-wrap: nowrap row;
@@ -195,11 +197,18 @@ hr {
     border-radius: 100%;
   }
 
-  .name {
+  &__name {
     color: var(--clr-neutral-600);
   }
 }
-
-/* Desktop layout */
-@media screen and (max-width: 400px) {
+.attribution {
+  background-color: var(--clr-neutral-400);
+  width: 100%;
+  a {
+    color: var(--clr-primary-400);
+  }
 }
+
+// /* Desktop layout */
+// @media screen and (max-width: 400px) {
+// }

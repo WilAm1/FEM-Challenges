@@ -106,6 +106,10 @@ p {
   font-weight: var(--fw-light);
 }
 
+hr {
+  border-top: 2px solid var(--clr-neutral-500);
+}
+
 .centered {
   display: grid;
   grid-template-rows: 1fr 50px;
@@ -154,26 +158,22 @@ p {
   opacity: 1;
 }
 
-details {
+.details {
   display: flex;
   justify-content: space-between;
 }
-details .price {
+.details .price {
   color: var(--clr-primary-400);
 }
-details .price::before {
+.details .price::before {
   display: inline;
   content: url("../images/icon-ethereum.svg");
   margin-right: 10px;
 }
-details .duration::before {
+.details .duration::before {
   display: inline;
   content: url("../images/icon-clock.svg");
   margin-right: 10px;
-}
-
-hr {
-  border-top: 2px solid var(--clr-neutral-500);
 }
 
 .creation {
@@ -188,10 +188,16 @@ hr {
   border: 2px solid var(--clr-neutral-600);
   border-radius: 100%;
 }
-.creation .name {
+.creation__name {
   color: var(--clr-neutral-600);
 }
 
-/* Desktop layout */
+.attribution {
+  background-color: var(--clr-neutral-400);
+  width: 100%;
+}
+.attribution a {
+  color: var(--clr-primary-400);
+}
 
 /*# sourceMappingURL=output.css.map */
