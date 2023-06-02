@@ -25,70 +25,87 @@
     />
   </head>
   <body class="flex h-screen flex-col">
-    <main class="flex-1 md:grid md:place-content-center">
-      <!-- gradient bg -->
-      <div
-        class="text-center text-paleBlue bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue rounded-b-3xl md:rounded-lg p-12 space-y-6"
-      >
-        <!-- result -->
-        <p class="text-xl text-lightLavender">Your Result</p>
-        <!-- Circle -->
-        <div class="grid place-content-center">
-          <div
-            class="circle w-32 h-32 rounded-full bg-gradient-to-b from-violetBlue to-persianBlue grid place-content-center"
+    <main class="flex-1 md:flex md:place-content-center md:items-center">
+      <div class="md:flex border shadow-xl md:rounded-3xl">
+        <!-- gradient bg -->
+        <div
+          class="text-center text-paleBlue bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue rounded-b-3xl md:rounded-3xl p-12 space-y-6 md:p-6 md:w-80"
+        >
+          <!-- result -->
+          <p class="text-xl text-lightLavender">Your Result</p>
+          <!-- Circle -->
+          <div class="grid place-content-center">
+            <div
+              class="circle w-48 h-48 rounded-full bg-gradient-to-b from-violetBlue to-persianBlue grid place-content-center"
+            >
+              <h2 class="text-7xl font-extrabold text-white">76</h2>
+              <p class="text-lightLavender">of 100</p>
+            </div>
+          </div>
+          <!-- result text -->
+          <div class="space-y-2">
+            <h2 class="text-3xl font-extrabold">Great</h2>
+            <p class="text-lightLavender max-w-prose mx-auto">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </div>
+        <!-- Summary Start -->
+        <div class="p-8 space-y-4 md:w-[22rem]">
+          <h2 class="md:text-lg">Summary</h2>
+          <div class="space-y-4">
+            <div class="p-4 border rounded-xl flex justify-between">
+              <span class="text-lightRed">
+                <img
+                  class="inline"
+                  src="assets/images/icon-reaction.svg"
+                  alt=""
+                />
+                Reaction
+              </span>
+              <span>80 <span class="text-lightLavender">/ 100</span></span>
+            </div>
+            <div class="border p-4 rounded-xl flex justify-between">
+              <span class="text-orangeyYellow">
+                <img
+                  class="inline"
+                  src="assets/images/icon-memory.svg"
+                  alt=""
+                />
+                Memory
+              </span>
+              <span>92 <span class="text-lightLavender">/ 100</span></span>
+            </div>
+            <div class="border p-4 rounded-xl flex justify-between">
+              <span class="text-greenTeal">
+                <img
+                  class="inline"
+                  src="assets/images/icon-verbal.svg"
+                  alt=""
+                />
+                Verbal
+              </span>
+              <span>61 <span class="text-lightLavender">/ 100</span></span>
+            </div>
+            <div class="border p-4 rounded-xl flex justify-between">
+              <span class="text-cobaltBlue">
+                <img
+                  class="inline"
+                  src="assets/images/icon-visual.svg"
+                  alt=""
+                />
+                Visual
+              </span>
+              <span>72 <span class="text-lightLavender">/100</span></span>
+            </div>
+          </div>
+          <button
+            class="bg-darkGrayBlue w-full py-4 text-white rounded-3xl hover:bg-gradient-to-b hover:from-lightSlateBlue hover:to-lightRoyalBlue"
           >
-            <h2 class="text-5xl font-extrabold text-white">76</h2>
-            <p>of 100</p>
-          </div>
+            Continue
+          </button>
         </div>
-        <!-- result text -->
-        <div class="space-y-2">
-          <h2 class="text-xl font-extrabold">Great</h2>
-          <p class="max-w-prose">
-            You scored higher than 65% of the people who have taken these tests.
-          </p>
-        </div>
-      </div>
-      <div class="p-8 space-y-4">
-        <h2 class="">Summary</h2>
-
-        <div class="px-4 space-y-8 border">
-          <div class="p-4 rounded-xl flex justify-between">
-            <span class="text-lightRed">
-              <img
-                class="inline"
-                src="assets/images/icon-reaction.svg"
-                alt=""
-              />
-              Reaction
-            </span>
-            <span>80 <span class="text-lightLavender">/ 100</span></span>
-          </div>
-          <div class="border p-4 rounded-xl flex justify-between">
-            <span class="text-orangeyYellow">
-              <img class="inline" src="assets/images/icon-memory.svg" alt="" />
-              Memory
-            </span>
-            <span>92 <span class="text-lightLavender">/ 100</span></span>
-          </div>
-          <div class="border p-4 rounded-xl flex justify-between">
-            <span class="text-greenTeal">
-              <img class="inline" src="assets/images/icon-verbal.svg" alt="" />
-              Verbal
-            </span>
-            <span>61 <span class="text-lightLavender">/ 100</span></span>
-          </div>
-          <div class="border p-4 rounded-xl flex justify-between">
-            <span class="text-cobaltBlue">
-              <img class="inline" src="assets/images/icon-visual.svg" alt="" />
-              Visual
-            </span>
-            <span>72 <span class="text-lightLavender">/100</span></span>
-          </div>
-        </div>
-        <button class="bg-darkGrayBlue w-full py-4 text-white rounded-3xl">
-          Continue
-        </button>
       </div>
     </main>
 
